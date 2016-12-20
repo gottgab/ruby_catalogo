@@ -1,0 +1,20 @@
+<h1>Detalle Producto</h1>
+  <p>
+      <b>Nombre:</b>
+      <%= @producto.nombre %>  
+  </p>
+  <p>
+      <b>Precio:</b>
+      <%= @producto.precio %>  
+  </p>
+  <p>
+      <b>Descripcion:</b>
+      <%= @producto.descripcion %>  
+  </p>
+  <p>
+      <b>Imagen:</b>
+      <%= image_tag(@producto.imagen) %>  
+  </p>
+  <%= link_to "Home", productos_path %>
+  <%= link_to "Nuevo", new_producto_path %>
+  <%= link_to "Editar", edit_producto_path(@producto) %>

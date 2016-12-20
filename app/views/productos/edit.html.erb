@@ -1,0 +1,20 @@
+<h1>Edicion de Productos</h1>
+<%= form_for @producto do |p| %>
+  <p>
+      <%= p.label "Nombre" %>
+      <%= p.text_field :nombre %>  
+  </p>
+  <p>
+      <%= p.label "Precio" %>
+      <%= p.text_field :precio %>  
+  </p>
+  <p>
+      <%= p.label "Descripcion" %>
+      <%= p.text_field :descripcion %>  
+  </p>
+  <p>
+      <%= p.label "Imagen" %>
+      <%= p.text_field :imagen %>  
+  </p>
+  <%= p.submit "Actualizar" %> 
+<% end %>

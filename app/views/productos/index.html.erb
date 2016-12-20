@@ -1,0 +1,23 @@
+<h1>Catalogo de Productos</h1>
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Descripcion</th>
+        <th>Imagen</th>
+        <th>Enlaces</th>
+    </tr>
+    <% @productos.each do |p| %>
+      <tr>
+          <td><%=  p.nombre %></td>
+          <td>$<%=  p.precio %></td>
+          <td><%=  p.descripcion %></td>
+          <td><%=  image_tag(p.imagen) %></td>
+          <td><%= link_to "Editar", edit_producto_path(p) %><br/>
+              <%= link_to "Mostrar", producto_path(p) %><br/>
+              <%= link_to "Borrar", producto_path(p), :confirm =>"¿Estas Seguro?", :method => :delete %></td>
+      </tr>
+    <% end %>
+</table>
+
+<%= link_to "Nuevo Producto", new_producto_path %>
